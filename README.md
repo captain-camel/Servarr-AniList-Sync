@@ -18,9 +18,9 @@ See [the AniList docs](https://anilist.github.io/ApiV2-GraphQL-Docs/) (Query -> 
 
 Specify a custom list which should be synced to your server using the `ANILIST_CUSTOM_LIST` parameter.
 
-### What determines where an anime is added?
+### What determines where anime is added?
 
-Whether anime is treated as a series and added to Sonarr, or as a movie and added to Radarr, is determined by the number of episodes (1 -> Radarr, more than 1 -> Sonarr), rather than the format reported by AniList. This is because AniList labels some multi-episodes series as movies (eg. [Memories](https://anilist.co/anime/1462/MEMORIES)), and those are better handled by Sonarr.
+Whether an anime is treated as a series and added to Sonarr, or as a movie and added to Radarr, is determined by the number of episodes (1 -> Radarr, more than 1 -> Sonarr), rather than the format reported by AniList. This is because AniList labels some multi-episodes series as movies (eg. [Memories](https://anilist.co/anime/1462/MEMORIES)), and those are better handled by Sonarr.
 
 If you would like fine-grained control over which application an anime is added to, use the `ANILIST_CUSTOM_LIST_SONARR` and `ANILIST_CUSTOM_LIST_RADARR` parameters. When an anime is synced for any reason, its presence on these lists determines which app it should be added to. If it is on neither, the app will be decided automatically like normal. (Note that solely adding an anime to one of these lists will not cause it to be synced. A sync must be triggered by its status or presence on `ANILIST_CUSTOM_LIST`.)
 
