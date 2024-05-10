@@ -79,7 +79,7 @@ if __name__ == '__main__':
     for media in media_list:
         # Ensure episode count is reliable by rejecting unreleased anime
         released = media['media']['status'] != 'NOT_YET_RELEASED'
-        matches_status = (media['status'] in [status.strip() for status in anilist_statuses.split(',')]) if 'status' in media else False
+        matches_status = (media['status'] in [status.strip() for status in anilist_statuses.split(',')]) if anilist_statuses is not None else False
         in_custom_list = (
             anilist_custom_list is not None and
             anilist_custom_list in media['customLists'] and
