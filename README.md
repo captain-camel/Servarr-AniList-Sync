@@ -12,7 +12,7 @@ The script will attempt to add anime by its TVDB or IMDB ID, and will fall back 
 
 Pass a comma separated list of the statuses you would like to sync as the `ANILIST_STATUSES` parameter. Whenever a sync is executed, anime with any of these statuses will be synced.
 
-See [the AniList docs](https://anilist.github.io/ApiV2-GraphQL-Docs/) for which statuses can be specified.
+See [the AniList docs](https://anilist.github.io/ApiV2-GraphQL-Docs/) (Query -> MediaList -> MediaListStatus) for which statuses can be specified.
 
 ### Custom List
 
@@ -78,7 +78,7 @@ docker run -d \
 
 The docker image uses `cron` to run the script periodically. To use it outside of Docker, you will have to set up scheduling yourself. The script itself is contained in the  `/src` directory, so that is all you will need. Remember to pass in parameters through the environment.
 
-### Parameters
+## Parameters
 
 All parameters are passed as environment variables. No ports or volumes are necessary.
 
