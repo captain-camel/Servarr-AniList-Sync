@@ -13,4 +13,4 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-CMD echo \*/$INTERVAL_MINUTES \* \* \* \* python3 /app/src/main.py | crontab - && crond -f
+CMD echo "${CRON_SCHEDULE}" python3 /app/src/main.py | crontab - && crond -f
